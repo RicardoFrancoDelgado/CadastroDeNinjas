@@ -1,4 +1,4 @@
-package dev.ricardo.CadastroDeNinjas;
+package dev.ricardo.CadastroDeNinjas.Ninjas;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
