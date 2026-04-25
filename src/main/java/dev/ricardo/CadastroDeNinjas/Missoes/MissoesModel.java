@@ -12,41 +12,36 @@ public class MissoesModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
+
     private String dificuldade;
 
-    private List<NinjaModel> ninja;
+    // @OneToMany - Uma única missão para muitos ninjas
+    @OneToMany(mappedBy = "missoes")
+    private List<NinjaModel> ninjas;
 
     public MissoesModel() {
     }
 
-    public MissoesModel(Long id, String titulo, String rank) {
-        this.id = id;
-        this.nome = titulo;
-        this.dificuldade = rank;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public MissoesModel(String nome, String dificuldade) {
+        this.nome = nome;
+        this.dificuldade = dificuldade;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String titulo) {
-        this.nome = titulo;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getDificuldade() {
         return dificuldade;
     }
 
-    public void setDificuldade(String rank) {
-        this.dificuldade = rank;
+    public void setDificuldade(String dificuldade) {
+        this.dificuldade = dificuldade;
     }
 }
