@@ -16,4 +16,9 @@ public class MissoesService {
     public List<MissoesModel> listarMissoes() {
         return missoesRepository.findAll();
     }
+
+    // listar missoes por id
+    public MissoesModel listarMissoesPorID(Long id) {
+        return missoesRepository.findById(id).orElse(null);
+    }
 }
