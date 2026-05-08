@@ -21,4 +21,9 @@ public class MissoesService {
     public MissoesModel listarMissoesPorID(Long id) {
         return missoesRepository.findById(id).orElse(null);
     }
+
+    // Criar missoes
+    public MissoesModel criarMissoes(MissoesModel missoes) {
+        return missoesRepository.save(missoes);
+    }
 }
