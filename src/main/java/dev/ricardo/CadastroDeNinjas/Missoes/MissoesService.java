@@ -26,4 +26,9 @@ public class MissoesService {
     public MissoesModel criarMissoes(MissoesModel missoes) {
         return missoesRepository.save(missoes);
     }
+
+    // Deletar uma missão - Precisa ser void
+    public void deletarMissoes(Long id) {
+        missoesRepository.deleteById(id);
+    }
 }
