@@ -14,5 +14,5 @@ public class MissoesDTO {
     private Long id;
     private String nome;
     private String dificuldade;
-    private List<NinjaModel> ninjas;
+//    private List<NinjaModel> ninjas; -> missoes não precisam mostrar os ninjas adicionados, ninjas precisam mostrar a missão é o contrário
 }
